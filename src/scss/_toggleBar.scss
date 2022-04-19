@@ -1,0 +1,58 @@
+.toggleBar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        color: hsl(234, 14%, 74%);
+        margin: 20px;
+    }
+    h1{
+        color:hsl(233, 13%, 49%);
+        margin-bottom: 25px;
+    }
+    .toggleBar_timeSet{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        input:checked+label::after{
+            transform: translateX(30px);
+        }
+        input{
+            position: absolute;
+            left: -9999px;
+        }
+        label{
+            position: relative;
+            display: inline-block;
+            height: 30px;
+            width: 60px;
+            background:linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        label:hover{
+            background:linear-gradient(to right,hsl(236, 72%, 79%,0.5),hsl(237, 63%, 64%,0.5));
+        }
+        label::after{
+            content:'';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius : 20px;
+            background-color: white;
+            left: 5px;
+            top: 5px;
+            transition: all 0.5s;
+        }
+        
+
+    }
+}
+@media screen and (max-width:1440px){
+    .toggleBar{
+        margin-top: 60px;
+    }
+}
